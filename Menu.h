@@ -1,5 +1,12 @@
-//Daniel Gaska
-//3.15
+/*
+Daniel Gaska
+Ryan Moran
+Elisabeth Brooks
+Anthony Scalise
+
+C++ Encryption/Decryption Project
+*/
+
 #include <iostream>
 #include <iomanip>
 #include <string>

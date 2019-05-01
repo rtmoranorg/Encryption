@@ -6,14 +6,15 @@ Menu::Menu() {}
 void Menu::mainMenu(int choice1)
 {
 	cout << endl;
-	cout << "***********************************************" << endl;
-	cout << "*        Welcome to ________ Encryption       *" << endl;
-	cout << "* Please select an option from the menu below *" << endl;
-	cout << "***********************************************" << endl;
+	cout << "************************************************" << endl;
+	cout << "* Welcome to the Encryption/Decryption Machine *" << endl;
+	cout << "*                                              *" << endl;
+	cout << "* Please select an option from the menu below  *" << endl;
+	cout << "************************************************" << endl;
 	cout << endl;
 
-	cout << "1-> Encrypt a string" << endl;
-	cout << "2-> Decrypt a string" << endl;
+	cout << "1-> Encrypt text" << endl;
+	cout << "2-> Decrypt text" << endl;
 	cout << "3-> Exit" << endl;
 	cin >> choice1;
 	mainChoice = choice1;
@@ -23,6 +24,7 @@ void Menu::encryptMenu(int choice2)
 	cout << endl;
 	cout << "**********************************************************" << endl;
 	cout << "*                      Encryption                        *" << endl;
+	cout << "*                                                        *" << endl;
 	cout << "* Please choose an encryption method from the menu below *" << endl;
 	cout << "**********************************************************" << endl;
 	cout << endl;
@@ -38,13 +40,14 @@ void Menu::decryptMenu(int choice3)
 	cout << endl;
 	cout << "**********************************************************" << endl;
 	cout << "*                      Decryption                        *" << endl;
-	cout << "* Please choose an decryption method from the menu below *" << endl;
+	cout << "*                                                        *" << endl;
+	cout << "* Please choose a decryption method from the menu below  *" << endl;
 	cout << "**********************************************************" << endl;
 	cout << endl;
 
 	cout << "1-> Substitution Cipher" << endl;
 	cout << "2-> Transposition Cipher" << endl;
-	cout << "3-> Bruteforce Decrpytion" << endl;
+	cout << "3-> I don't know which decryption method was used" << endl;
 	cout << "4-> Return to Main Menu" << endl;
 	cin >> choice3;
 	decryptChoice = choice3;
@@ -95,14 +98,32 @@ string Menu::caesarEncrypt(string cleartext, int shift = 1) {
 void Menu::enSubMenu(int choice4)
 {
 	cout << endl;
-	cout << "";
+	cout << "*************************************" << endl;
+	cout << "*            Encryption             *" << endl;
+	cout << "*                                   *" << endl;
+	cout << "*        Substitution Cipher        *" << endl;
+	cout << "* Please select from the menu below *" << endl;
+	cout << "*************************************" << endl;
+	cout << endl;
+
+	cout << "1-> Enter the text to be encrypted" << endl;
+	cout << "2-> Return to the Encryption Menu" << endl;
 	cin >> choice4;
 	enSubChoice = choice4;
 }
 void Menu::enCaeMenu(int choice5)
 {
 	cout << endl;
-	cout << "";
+	cout << "*************************************" << endl;
+	cout << "*            Encryption             *" << endl;
+	cout << "*                                   *" << endl;
+	cout << "*       Transposition Cipher        *" << endl;
+	cout << "* Please select from the menu below *" << endl;
+	cout << "*************************************" << endl;
+	cout << endl;
+
+	cout << "1-> Enter the text to be encrypted" << endl;
+	cout << "2-> Return to the Encryption Menu" << endl;
 	cin >> choice5;
 	enCaeChoice = choice5;
 }
@@ -160,21 +181,48 @@ void Menu::bruteforce(string ciphertext) {
 void Menu::deSubMenu(int choice6)
 {
 	cout << endl;
-	cout << "";
+	cout << "*************************************" << endl;
+	cout << "*            Decryption             *" << endl;
+	cout << "*                                   *" << endl;
+	cout << "*        Substitution Cipher        *" << endl;
+	cout << "* Please select from the menu below *" << endl;
+	cout << "*************************************" << endl;
+	cout << endl;
+
+	cout << "1-> Enter the text to be decrypted" << endl;
+	cout << "2-> Return to the Decryption Menu" << endl;
 	cin >> choice6;
 	deSubChoice = choice6;
 }
 void Menu::deCaeMenu(int choice7)
 {
 	cout << endl;
-	cout << "";
+	cout << "*************************************" << endl;
+	cout << "*            Decryption             *" << endl;
+	cout << "*                                   *" << endl;
+	cout << "*       Transposition Cipher        *" << endl;
+	cout << "* Please select from the menu below *" << endl;
+	cout << "*************************************" << endl;
+	cout << endl;
+
+	cout << "1-> Enter the text to be decrypted" << endl;
+	cout << "2-> Return to the decryption Menu" << endl;
 	cin >> choice7;
 	deCaeChoice = choice7;
 }
 void Menu::bfMenu(int choice8)
 {
 	cout << endl;
-	cout << "";
+	cout << "*************************************" << endl;
+	cout << "*            Decryption             *" << endl;
+	cout << "*                                   *" << endl;
+	cout << "*          Unknown Cipher           *" << endl;
+	cout << "* Please select from the menu below *" << endl;
+	cout << "*************************************" << endl;
+	cout << endl;
+
+	cout << "1-> Attempt to decrypt using a bruteforce method" << endl;
+	cout << "2-> Return to the decryption Menu" << endl;
 	cin >> choice8;
 	bfChoice = choice8;
 }
