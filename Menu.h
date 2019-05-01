@@ -21,11 +21,11 @@ public://public member function prototypes
 	void mainMenu();
 	void encryptMenu();
 	void decryptMenu();
-	string subEncrypt(string, int);
+	string subEncrypt(string);
 	string caesarEncrypt(string, int);
 	void enSubMenu();
 	void enCaeMenu();
-	string subDecrypt(string, int);
+	string subDecrypt(string);
 	string caesarDecrypt(string, int);
 	void bruteforce(string);
 	void deSubMenu();
