@@ -9,12 +9,13 @@ int main() {
 	string cleartext, ciphertext;
 
 	Menu myMenu;
+	myMenu.mainMenu();
 	cout << "Enter Clear Text" << endl;
 	getline(cin, cleartext);
 	cout << endl;
 	cout << "Caesar" << endl;
-	cout << "Encrypt: " << myMenu.caesarEncrypt(cleartext, 1) << endl;
-	cout << "Decrypt: " << myMenu.caesarDecrypt(myMenu.caesarEncrypt(cleartext, 1),1) << endl;
+	cout << "Encrypt: " << myMenu.caesarEncrypt(cleartext,3) << endl;
+	cout << "Decrypt: " << myMenu.caesarDecrypt(myMenu.caesarEncrypt(cleartext, 3),3) << endl;
 	cout << endl;
 	cout << "Substitution" << endl;
 	cout << "Encrypt: " << myMenu.subEncrypt(cleartext, 0) << endl;
@@ -23,7 +24,7 @@ int main() {
 	cout << "Bruteforce" << endl;
 	// cout << subEncrypt("triple zulu one two three") << endl;
 	// cout << subDecrypt(subEncrypt(cleartext)) << endl;
-	myMenu.bruteforce(myMenu.subEncrypt(cleartext, 0));
+	myMenu.bruteforce(myMenu.caesarEncrypt(cleartext, 3));
 
 	system("pause");
 }

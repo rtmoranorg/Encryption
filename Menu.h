@@ -18,19 +18,20 @@ public://public member function prototypes
 
 	//creating protoype functions
 	Menu();
-	void mainMenu(int);
-	void encryptMenu(int);
-	void decryptMenu(int);
+	void mainMenu();
+	void encryptMenu();
+	void decryptMenu();
 	string subEncrypt(string, int);
 	string caesarEncrypt(string, int);
-	void enSubMenu(int);
-	void enCaeMenu(int);
+	void enSubMenu();
+	void enCaeMenu();
 	string subDecrypt(string, int);
 	string caesarDecrypt(string, int);
 	void bruteforce(string);
-	void deSubMenu(int);
-	void deCaeMenu(int);
-	void bfMenu(int);
+	void deSubMenu();
+	void deCaeMenu();
+	void bfMenu();
+	void superMenu();
 
 private://private data members
 	int mainChoice{ 0 };
@@ -41,4 +42,5 @@ private://private data members
 	int deSubChoice{ 0 };
 	int deCaeChoice{ 0 };
 	int bfChoice{ 0 };
+	int superChoice{ 0 };
 };//end class Menu
