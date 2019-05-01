@@ -13,17 +13,17 @@ int main() {
 	getline(cin, cleartext);
 	cout << endl;
 	cout << "Caesar" << endl;
-	cout << "Encrypt: " << myMenu.caesarEncrypt(cleartext) << endl;
-	cout << "Decrypt: " << myMenu.caesarDecrypt(myMenu.caesarEncrypt(cleartext)) << endl;
+	cout << "Encrypt: " << myMenu.caesarEncrypt(cleartext, 1) << endl;
+	cout << "Decrypt: " << myMenu.caesarDecrypt(myMenu.caesarEncrypt(cleartext, 1),1) << endl;
 	cout << endl;
 	cout << "Substitution" << endl;
-	cout << "Encrypt: " << myMenu.subEncrypt(cleartext) << endl;
-	cout << "Decrypt: " << myMenu.subDecrypt(myMenu.subEncrypt(cleartext)) << endl;
+	cout << "Encrypt: " << myMenu.subEncrypt(cleartext, 0) << endl;
+	cout << "Decrypt: " << myMenu.subDecrypt(myMenu.subEncrypt(cleartext, 0),0) << endl;
 	cout << endl;
 	cout << "Bruteforce" << endl;
 	// cout << subEncrypt("triple zulu one two three") << endl;
 	// cout << subDecrypt(subEncrypt(cleartext)) << endl;
-	myMenu.bruteforce(myMenu.subEncrypt(cleartext));
+	myMenu.bruteforce(myMenu.subEncrypt(cleartext, 0));
 
 	system("pause");
 }
